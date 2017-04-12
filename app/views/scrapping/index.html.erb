@@ -1,0 +1,23 @@
+<div class="container">
+<div class="row" style="min-height: 200px;">
+	
+</div>
+	<div class="row">
+	<div class="col-md-offset-4">
+	       <div id ='loadingDiv'><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+</div> 
+
+		<%= form_tag scrapping_scrapping_path, :method => :get, remote:true do %>
+        <span>Enter text to seach: <%= text_field_tag :a%></span>
+        <%= submit_tag "Search" %>
+        <%end%>
+	</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-md-offset-4">
+
+		<h5 id="result"></h5>
+		</div>
+	</div>
+</div>
