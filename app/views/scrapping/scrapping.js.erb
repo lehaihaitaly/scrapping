@@ -1,12 +1,4 @@
-var $loading = $('#loadingDiv').hide();
-var timeOutHandler;
-$(document)
-  .ajaxStart(function () {
-   timeOutHandler = setTimeout(function(){$loading.show();}, 3000);
-})
-.ajaxStop(function () {
-   clearTimeout(timeOutHander);
-   $loading.hide();
-});
+
 var ele = document.getElementById("result");
-ele.innerHTML = "<%= @test %>";
+
+ele.innerHTML = "<%= j render('searchResults')%>";
